@@ -52,6 +52,7 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem 'pry'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -68,7 +69,6 @@ end
 group :test do
   gem 'capybara'
   gem 'launchy'
-  gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'simplecov'
 end
