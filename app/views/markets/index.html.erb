@@ -1,0 +1,18 @@
+<h1 align="center">Markets</h1>
+
+<table class='markets-table'>
+  <tr>
+    <th>Name</th>
+    <th>City</th>
+    <th>State</th>
+    <th> </th>
+  </tr>
+  <% @markets.each do |market| %>
+    <tr id="market-<%= market.id%>">
+      <td><%= market.name  %></td>
+      <td><%= market.city  %></td>
+      <td><%= market.state  %></td>
+      <td><%= button_to 'More Info'  %></td>
+    </tr>
+  <% end %>
+</table>
