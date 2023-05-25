@@ -5,7 +5,7 @@ RSpec.describe 'Market Index Page' do
     @markets = MarketFacade.new.all_markets
   end
 
-  it 'displays all markets' do
+  it 'displays all markets with links' do
     visit markets_path
 
     expect(page).to have_content('Markets')
@@ -20,6 +20,17 @@ RSpec.describe 'Market Index Page' do
           expect(page).to have_button('More Info')
         end
       end
+    end
+
+    within('tr#market-322474') do
+      click_button('More Info')
+      expect(current_path).to eq(market_path(322474))
+    end
+
+    visit markets_path
+    within('tr#market-322458') do
+      click_button('More Info')
+      expect(current_path).to eq(market_path(322458))
     end
   end
 end
