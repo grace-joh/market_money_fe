@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe MarketService do
+RSpec.describe MarketService, :vcr do
   let(:service) { MarketService.new }
 
   describe 'all_markets' do

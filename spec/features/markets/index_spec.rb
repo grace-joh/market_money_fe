@@ -1,9 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe 'Market Index Page' do
-  before(:all) do
-    @markets = MarketFacade.new.all_markets
-  end
+RSpec.describe 'Market Index Page', :vcr do
+  let(:markets) { MarketFacade.new.all_markets }
 
   it 'displays all markets with links' do
     visit markets_path
@@ -11,7 +9,7 @@ RSpec.describe 'Market Index Page' do
     expect(page).to have_content('Markets')
     expect(page).to have_css('table')
     within('table.markets-table') do
-      @markets.each do |market|
+      markets.each do |market|
         within("tr#market-#{market.id}") do
           expect(page).to have_content(market.name)
           # expect(page).to have_content(market.city)

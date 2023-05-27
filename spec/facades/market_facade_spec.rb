@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe MarketFacade do
+RSpec.describe MarketFacade, :vcr do
   before(:all) do
     @facade = MarketFacade.new
   end

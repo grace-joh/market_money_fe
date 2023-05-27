@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Market Show Page' do
+RSpec.describe 'Market Show Page', :vcr do
   let(:market) { MarketFacade.new.market_with_vendors(322474) }
 
   it 'displays all markets' do
