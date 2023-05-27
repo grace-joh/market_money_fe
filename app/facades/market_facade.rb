@@ -8,7 +8,7 @@ class MarketFacade
   def market_with_vendors(market_id)
     market = Market.new(market_by_id(market_id))
     market.vendors = vendors_by_market(market_id).map do |vendor_data|
-      Vendor.new(vendor_data)
+      VendorBase.new(vendor_data)
     end
     market
   end

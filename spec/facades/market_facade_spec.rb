@@ -19,7 +19,7 @@ RSpec.describe MarketFacade, :vcr do
       market = @facade.market_with_vendors(322474)
       expect(market).to be_a(Market)
       expect(market.vendors).to be_an(Array)
-      expect(market.vendors).to all(be_a(Vendor))
+      expect(market.vendors).to all(be_a(VendorBase))
       expect(market.vendors.count).to eq(35)
     end
   end
