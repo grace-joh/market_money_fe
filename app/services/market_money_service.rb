@@ -1,4 +1,4 @@
-class MarketService
+class MarketMoneyService
   def all_markets
     get_url('api/v0/markets')
   end
@@ -9,6 +9,10 @@ class MarketService
 
   def vendors_by_market(id)
     get_url("api/v0/markets/#{id}/vendors")
+  end
+
+  def vendor_by(id)
+    get_url("api/v0/vendors/#{id}")
   end
 
   private

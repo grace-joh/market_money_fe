@@ -28,6 +28,6 @@ class MarketFacade
   end
 
   def service
-    @_service ||= MarketService.new
+    @_service ||= MarketMoneyService.new
   end
 end
