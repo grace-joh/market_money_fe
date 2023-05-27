@@ -1,0 +1,111 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v0/markets/322474
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"24de0d2f904f643b0d3957a88ecf8ec5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 050a05a2-1bad-446a-8d46-cb310f027d66
+      X-Runtime:
+      - '0.006389'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.31, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.35
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"322474","type":"market","attributes":{"name":"2nd Street
+        Farmers'' Market","street":"194 second street","city":"Amherst","county":"Amherst","state":"Virginia","zip":"24521","lat":"37.583311","lon":"-79.048573","vendor_count":35}}}'
+  recorded_at: Sat, 27 May 2023 15:57:26 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v0/markets/322474
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Content-Type:
+      - application/json
+      User-Agent:
+      - Faraday v2.7.4
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      X-Download-Options:
+      - noopen
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Content-Type:
+      - application/json; charset=utf-8
+      Vary:
+      - Accept
+      Etag:
+      - W/"24de0d2f904f643b0d3957a88ecf8ec5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8d8d33a2-0167-4776-88a3-b0aaaa3187ee
+      X-Runtime:
+      - '0.005674'
+      Server-Timing:
+      - start_processing.action_controller;dur=0.05, sql.active_record;dur=1.38, instantiation.active_record;dur=0.02,
+        process_action.action_controller;dur=2.13
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"322474","type":"market","attributes":{"name":"2nd Street
+        Farmers'' Market","street":"194 second street","city":"Amherst","county":"Amherst","state":"Virginia","zip":"24521","lat":"37.583311","lon":"-79.048573","vendor_count":35}}}'
+  recorded_at: Sat, 27 May 2023 15:57:26 GMT
+recorded_with: VCR 6.1.0

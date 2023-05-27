@@ -5,6 +5,7 @@ class Market
               :city,
               :state,
               :zip
+  attr_accessor :vendors
 
   def initialize(data)
     @id = data[:id]
@@ -13,5 +14,6 @@ class Market
     @city = data[:attributes][:city]
     @state = data[:attributes][:state]
     @zip = data[:attributes][:zip]
+    @vendors = []
   end
 end

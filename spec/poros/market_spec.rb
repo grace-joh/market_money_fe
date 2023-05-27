@@ -24,6 +24,7 @@ RSpec.describe Market do
       expect(market.city).to eq('Burnsville')
       expect(market.state).to eq('North Carolina')
       expect(market.zip).to eq('28714')
+      expect(market.vendors).to eq([])
     end
   end
 end

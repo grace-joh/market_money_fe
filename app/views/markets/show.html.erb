@@ -1,0 +1,18 @@
+<header align="center">
+  <h1><%= @market.name %></h1>
+  <div class='market-address'>
+    <h3>
+      <%= @market.street %>
+      <br>
+      <%= @market.city %>, <%= @market.state %> <%= @market.zip %>
+    </h3>
+  </div>
+</header>
+
+<section class='vendors-list'>
+  <h3>Vendors at our Market:</h3>
+
+  <% @market.vendors.each do |vendor| %>
+      <%= link_to vendor.name %><br>
+  <% end %>
+</section>
