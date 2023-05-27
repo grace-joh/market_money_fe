@@ -1,14 +1,11 @@
-class Vendor
-  attr_reader :id,
-              :name,
-              :description,
+class Vendor < VendorBase
+  attr_reader :description,
               :contact_name,
               :contact_phone,
               :credit_accepted
 
   def initialize(data)
-    @id = data[:id]
-    @name = data[:attributes][:name]
+    super(data)
     @description = data[:attributes][:description]
     @contact_name = data[:attributes][:contact_name]
     @contact_phone = data[:attributes][:contact_phone]
