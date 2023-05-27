@@ -41,12 +41,12 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - a12a4150-546d-4b2f-b48a-111e8ac6e380
+      - 6fc81440-fea8-46c6-a74f-c344fee7fff1
       X-Runtime:
-      - '0.009156'
+      - '0.008039'
       Server-Timing:
-      - start_processing.action_controller;dur=0.05, sql.active_record;dur=3.49, instantiation.active_record;dur=0.13,
-        process_action.action_controller;dur=5.26
+      - start_processing.action_controller;dur=0.04, sql.active_record;dur=2.17, instantiation.active_record;dur=0.11,
+        process_action.action_controller;dur=4.12
       Transfer-Encoding:
       - chunked
     body:
@@ -122,5 +122,5 @@ http_interactions:
         Tad Langosh","contact_phone":"848-755-8522","credit_accepted":false}},{"id":"55055","type":"vendor","attributes":{"name":"Herb
         Appeal","description":"Fresh herbs and herbal products.","contact_name":"Mattie
         Doyle","contact_phone":"394.419.5264","credit_accepted":true}}]}'
-  recorded_at: Sat, 27 May 2023 15:57:26 GMT
+  recorded_at: Sat, 27 May 2023 16:57:03 GMT
 recorded_with: VCR 6.1.0

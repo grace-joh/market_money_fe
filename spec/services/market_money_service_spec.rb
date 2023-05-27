@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe MarketService, :vcr do
-  let(:service) { MarketService.new }
+RSpec.describe MarketMoneyService, :vcr do
+  let(:service) { MarketMoneyService.new }
 
   describe 'all_markets' do
     it 'returns all markets data' do
@@ -89,6 +89,35 @@ RSpec.describe MarketService, :vcr do
         expect(attributes).to have_key(:credit_accepted)
         expect(attributes[:credit_accepted]).to be(true).or be(false)
       end
+    end
+  end
+
+  describe 'vendor_by(id)' do
+    it 'returns vendor data' do
+      vendor_data = service.vendor_by(55297)
+
+      expect(vendor_data).to be_a(Hash)
+      expect(vendor_data).to have_key(:data)
+
+      vendor = vendor_data[:data]
+      expect(vendor).to be_a(Hash)
+      expect(vendor).to have_key(:id)
+      expect(vendor[:id]).to be_a(String)
+      expect(vendor).to have_key(:type)
+      expect(vendor[:type]).to eq('vendor')
+      expect(vendor).to have_key(:attributes)
+      attributes = vendor[:attributes]
+      expect(attributes).to be_a(Hash)
+      expect(attributes).to have_key(:name)
+      expect(attributes[:name]).to be_a(String)
+      expect(attributes).to have_key(:description)
+      expect(attributes[:description]).to be_a(String)
+      expect(attributes).to have_key(:contact_name)
+      expect(attributes[:contact_name]).to be_a(String)
+      expect(attributes).to have_key(:contact_phone)
+      expect(attributes[:contact_phone]).to be_a(String)
+      expect(attributes).to have_key(:credit_accepted)
+      expect(attributes[:credit_accepted]).to be(true).or be(false)
     end
   end
 end
